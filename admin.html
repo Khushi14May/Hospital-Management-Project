@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Admin Dashboard</title>
+  <script src="./home.js"></script>
+  <style>
+    body {
+      background-color: rgba(117, 127, 134, 0.2);
+    }
+    .text-footer {
+  text-align: center;
+  padding: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+  `
+  <nav class="navbar navbar-dark bg-dark"  style="margin-top:-23px;">
+    <div class="container-fluid">
+
+      <ul class="nav nav-pills">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="javascript://" onclick="db()">Dashboard</a></li>
+            <li><a class="dropdown-item" href="javascript://" onclick="p('patient')">Patient</a></li>
+            <li><a class="dropdown-item" href="javascript://" onclick="d('docter')">Docter</a></li>
+         
+          </ul>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-light" href="./home1.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./patient.html">Patient</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="mainframe">
+  <div class=" row row-cols-1 row-cols-md-3 g-4 my-3  " style="width: 1000px; margin: auto;" >
+    <div class="col">
+      <div class="card bg-danger">
+        <img src="./image5.jpg" class="card-img-top" alt="..." style="width: 100px; height: 100px; margin: auto;">
+        <div class="card-body" style="text-align: center;">
+          <h5 class="card-title">10</h5>
+          <p class="card-text">Total Docter</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-primary">
+        <img src="./image10.jpg" class="card-img-top" alt="..." style="width: 100px; height: 100px; margin: auto;">
+        <div class="card-body" style="text-align: center;">
+          <h5 class="card-title">80</h5>
+          <p class="card-text">Total Patient</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card bg-success">
+        <img src="./image11.jpg" class="card-img-top" alt="..." style="width: 100px; height: 100px; margin: auto;">
+        <div class="card-body" style="text-align: center;">
+          <h5 class="card-title">30</h5>
+          <p class="card-text">Total Appoinment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- doctors block -->
+  <div class="col-md-6 docter" style="display: none;" >
+    <table class="table table-hover table-bordered" style="width: 600px; margin: 5% 50%; border: 2px;">
+
+      <tr class="bg-primary">
+        <td scope="col" colspan="4" style="text-align: center;">Recent Docters</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Department</td>
+        <td>Mobile</td>
+        <td>Status</td>
+      </tr>
+
+
+      <tr>
+        <td>Dr. Nimish Oza</td>
+        <td>Eye Specialist</td>
+        <td>9995566751</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+        <td>Dr. Bindu Agarwal</td>
+        <td>ENT</td>
+        <td>9993456214</td>
+        <td><button class="bg-primary">Temporary</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Naval Shah</td>
+        <td>Podiatrist</td>
+        <td>9993456510</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Shreya Mehta</td>
+        <td>Pediatrician</td>
+        <td>9993456518</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Isha Parmar</td>
+        <td>Endocrinologist</td>
+        <td>9993456517</td>
+        <td><button class="bg-primary">Temporary</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Hetvi Shah</td>
+        <td>Neurologist</td>
+        <td>9993456516</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Avni Shah</td>
+        <td>Psychiatrist</td>
+        <td>9993456515</td>
+        <td><button class="bg-primary">Temporary</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Nakuul Mehta</td>
+        <td>OB/GYN</td>
+        <td>9993456514</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Ishika Mehta</td>
+        <td>Nephrologist</td>
+        <td>9993456513</td>
+        <td><button class="bg-primary">Permanent</button></td>
+      </tr>
+      <tr>
+
+        <td>Dr. Fagun Shah</td>
+        <td>ENT</td>
+        <td>9993456512</td>
+        <td><button class="bg-primary">Temporary</button></td>
+      </tr>
+    </table>
+  </div>
+  <!-- patient part -->
+<div class="patient" style="display: none;">
+   <div class=" row row-cols-2 row-cols-md-4 g-4 my-3  "  >
+    <div class="col">
+        <div class="card bg-danger">
+            <img src="./image5.jpg" class="card-img-top" alt="..."
+                style="width: 100px; height: 100px; margin: auto;">
+            <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Dr. Bindu Agarwal</h5>
+                <p class="card-text"> Docter Name</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card bg-primary">
+            <img src="./image4.jpg" class="card-img-top" alt="..."
+                style="width: 100px; height: 100px; margin: auto;">
+            <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">Pain in ears</h5>
+                <p class="card-text">Symptoms</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card bg-warning">
+          <img src="./image16.jpg" class="card-img-top" alt="..."
+              style="width: 100px; height: 100px; margin: auto;">
+          <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">ENT</h5>
+              <p class="card-text">Docter Department</p>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+    <div class="card bg-success">
+        <img src="./image11.jpg" class="card-img-top" alt="..."
+            style="width: 100px; height: 100px; margin: auto;">
+        <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">March 15 2022</h5>
+                <p class="card-text">Admit Date</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+  <div class="col-md-6 patient " style="display: none;">
+    <table class="table table-hover table-bordered " style="width: 600px; margin-left: 15px; border: 2px;">
+
+      <tr class="bg-primary">
+        <td scope="col" colspan="5" style="text-align: center;">Recent Patient</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Symptoms</td>
+        <td>Mobile</td>
+        <td>Address</td>
+        <td>Status</td>
+      </tr>
+
+
+      <tr>
+        <td>khushi Shah</td>
+        <td>pain in ears</td>
+        <td>9995566751</td>
+        <td>B/14 Shreyas Complex</td>
+        <td><button class="bg-success">On Hold</button></td>
+      </tr>
+      <tr>
+        <td>Divya Modi</td>
+        <td>Eching in eyes</td>
+        <td>9993456214</td>
+        <td>C/20 Komal Apartment</td>
+        <td><button class="bg-primary">Admitted</button></td>
+      </tr>
+
+    </table>
+  </div>
+  <footer style="background-color:#16a3db; margin-top: 23%;">
+    <p class="text-footer">
+        Copyright @-All rights are reserved by Khushi Shah
+    </p>
+
+</footer>
+</body>
+
+</html>
