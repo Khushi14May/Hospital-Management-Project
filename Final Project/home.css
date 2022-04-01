@@ -13,6 +13,12 @@ body {margin:0;font-family:Arial}
   --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
   --border:.2rem solid var(--blue);
 }
+
+
+.main-head{
+  font-family: cursive;
+  font-weight: bolder;
+}
 /* section part--------------------------------------------------------------------------------- */
 
 section{
@@ -142,6 +148,7 @@ section:nth-child(even){
   line-height: 1.8;
   
 }
+
 /* review part-------------------------------------------------------------- */
 .review .box-container{
   display: grid;
